@@ -1,4 +1,4 @@
-﻿int numberA = 7;
-int numberB = 7;
-int summ = numberA + numberB;
-Console.WriteLine(summ);
+﻿double numberA = 7;
+double numberB = 3;
+double div = numberA / numberB;
+Console.WriteLine(div);
