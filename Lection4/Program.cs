@@ -13,9 +13,12 @@ for (int rows = 0; rows < 2; rows++)
     }
 }
 */
-
 /*
-void PrintArray(int[,] matr)
+
+*/
+/*
+
+void PrintArray(int[,] matr) // Метод вывода массива на экран
 {
 
     for (int i = 0; i < matr.GetLength(0); i++)
@@ -28,7 +31,7 @@ void PrintArray(int[,] matr)
     }
 }
 
-void FillArray(int[,] matr)
+void FillArray(int[,] matr) //метод заполнения массива рандомными значениями
 {
     for (int i = 0; i < matr.GetLength(0); i++)
     {
@@ -38,10 +41,118 @@ void FillArray(int[,] matr)
         }
     }
 }
-int[,] matrix = new int[3, 4];
+int[,] matrix = new int[3, 4]; // Игнициализация двумерного массива
+PrintArray(matrix);
+FillArray(matrix);
+Console.WriteLine();
+PrintArray(matrix);
+*/
+/*
+void PrintArray(int[,] matr) // Метод вывода массива на экран
+{
+
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            Console.Write($"{matr[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
+void FillArray(int[,] matr) //метод заполнения массива рандомными значениями
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            matr[i,j] = new Random().Next(1,10); // "[оператор Next воспринимает интервал в таком виде)"
+        }
+    }
+}
+int[,] matrix = new int[3, 4]; // Игнициализация двумерного массива
 PrintArray(matrix);
 FillArray(matrix);
 Console.WriteLine();
 PrintArray(matrix);
 */
 
+//int[,] pic = new int[,]; // Игнициализация двумерного массива
+
+int[,] pic = new int[,]
+{
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+    {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+    {0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+    {0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0 },
+    {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 },
+    {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 },
+    {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0 },
+    {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 },
+    {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 },
+    {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0 },
+    {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0 },
+    {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0 },
+    {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0 },
+    {0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0 },
+    {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0 },
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0 },
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+    };
+
+
+
+void PrintImage(int[,] image) // Метод вывода массива на экран
+{
+
+    for (int i = 0; i < image.GetLength(0); i++)
+    {
+        for (int j = 0; j < image.GetLength(1); j++)
+        {
+            //Console.Write($"{image[i, j]} ");
+            if (image[i, j] == 0) Console.Write($" ");
+            else Console.Write($"+");
+        }
+        Console.WriteLine();
+    }
+}
+
+void FillImage(int row, int col)
+{
+    if (pic[row, col] == 0)
+    {
+        pic[row, col] = 1;
+        FillImage(row - 1, col);
+        FillImage(row, col - 1);
+        FillImage(row + 1, col);
+        FillImage(row, col + 1);
+    }
+
+}
+
+/*
+void FillArray(int[,] matr) //метод заполнения массива рандомными значениями
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            matr[i, j] = new Random().Next(1, 10); // "[оператор Next воспринимает интервал в таком виде)"
+        }
+    }
+}
+*/
+PrintImage(pic);
+FillImage(13, 13);
+PrintImage(pic);
+
+//FillArray(matrix);
+//Console.WriteLine();
+//PrintArray(matrix);
