@@ -149,15 +149,24 @@ PrintImage(pic);
 */
 
 //вычисление факториала при помощи рекурсивной функции
-
-int Factorial(int n)
+/*
+double Factorial(int n)
 {
     //!1 = 1
     //!0 = 0
     if (n == 1) return 1;
-    else n * Factorial(n-1);
+    else return n * Factorial(n-1);
 }
-Console.WriteLine(Factorial(3));
+for (int i = 1; i < 40; i++)
+{
+Console.WriteLine($"{i}! = {Factorial(i)}");
+    
+}
+*/
+
+//Рекурсия. Числа Фибоначи
+// f(1)=1, f(2)=1, f(n)=f(n-1)+f(n-2)
+
 
 
 //FillArray(matrix);
