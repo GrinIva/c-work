@@ -1,4 +1,5 @@
 ﻿// Двумерные массивы
+
 /*
 
 string[,] table = new string[2, 5];
@@ -80,6 +81,10 @@ PrintArray(matrix);
 
 //int[,] pic = new int[,]; // Игнициализация двумерного массива
 
+
+//метод рекурсисии
+/*
+//метод рекурсисии
 int[,] pic = new int[,]
 {
     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -137,21 +142,23 @@ void FillImage(int row, int col)
 
 }
 
-/*
-void FillArray(int[,] matr) //метод заполнения массива рандомными значениями
-{
-    for (int i = 0; i < matr.GetLength(0); i++)
-    {
-        for (int j = 0; j < matr.GetLength(1); j++)
-        {
-            matr[i, j] = new Random().Next(1, 10); // "[оператор Next воспринимает интервал в таком виде)"
-        }
-    }
-}
-*/
+
 PrintImage(pic);
 FillImage(13, 13);
 PrintImage(pic);
+*/
+
+//вычисление факториала при помощи рекурсивной функции
+
+int Factorial(int n)
+{
+    //!1 = 1
+    //!0 = 0
+    if (n == 1) return 1;
+    else n * Factorial(n-1);
+}
+Console.WriteLine(Factorial(3));
+
 
 //FillArray(matrix);
 //Console.WriteLine();
